@@ -12,6 +12,8 @@ public class BinaryCodeTranslator {
 
         int intOperator = 0;
 
+        int charCounter = 0;
+
         int bitCounter = 0;
 
         int byteCounter = 0;
@@ -63,10 +65,10 @@ public class BinaryCodeTranslator {
                     System.out.print("Texto => ");
                     textInput = scn.nextLine();
                     
-                    bitCounter = textInput.length();
-                    binaryCode = new int[bitCounter][8];
+                    charCounter = textInput.length();
+                    binaryCode = new int[charCounter][8];
 
-                    for(int i = 0; i < bitCounter; i++){
+                    for(int i = 0; i < charCounter; i++){
 
                         intOperator = textInput.charAt(i);
 
@@ -83,7 +85,7 @@ public class BinaryCodeTranslator {
                         }
                     }
 
-                    for(int i = 0; i < bitCounter; i++){
+                    for(int i = 0; i < charCounter; i++){
 
                         for(int j = 0; j < 8; j++){
 
